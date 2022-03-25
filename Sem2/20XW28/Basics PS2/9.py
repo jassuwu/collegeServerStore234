@@ -1,0 +1,10 @@
+A = set()
+A.add('White')
+A.add('Red')
+A.add('Green')
+A.add('Blue')
+print(A)
+A.remove('Red')
+print(A)
+print("present") if 'Yellow' in A else print("not present")
+        

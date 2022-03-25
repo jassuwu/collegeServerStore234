@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_PS-2_10</title>
+</head>
+
+<body>
+    <form>
+        <table align="center" width="100%">
+            <tr>
+                <td height="40" align="center" bgcolor="#efe9dc">
+                    <font size="6" face="helvetica"><strong>Bug Report</strong></font>
+                </td>
+            </tr>
+            <tr>
+                <table align="center">
+                    <tr>
+                        <td colspan="2">
+                            <font size="5" face="Helvetica">Write a new Issue.</font><br>
+                            <input type="text" size="200" name="issue-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <font face="Helvetica"> <strong>Severity:</strong></font>
+                            <input type="radio" for="sev" name="sev">
+                            <font face="Helvetica" color="green"> Low</font>
+                            <input type="radio" name="sev" for="sev">
+                            <font face="Helvetica" color="orange">Moderate</font>
+                            <input type="radio" for="sev" name="sev">
+                            <font face="Helvetica" color="red">High</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br>
+                            <font size="5" face="Helvetica">Write: </font>&ensp;&ensp;&ensp;&ensp;&ensp;<font size="5"
+                                color="blue" face="Helvetica">Attach a file:</font><input type="file"
+                                for="attachment"><br>
+                            <textarea name="buggy-part" cols="175" rows="30"></textarea>
+                        </td>
+                        <td valign="top">
+                            <br><br>
+                            <font size="5" face="Helvetica">Add labels:</font><br>
+                            <textarea name="label" id="label" cols="30" rows="15"></textarea><br>
+                            <font size="5" face="Helvetica">Choose device:</font>
+                            <select name="device">
+                                <option value="#">-Choose device-</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+                <td height="40" align="center">
+                    <button type="submit">SUBMIT</button>
+                    <button type="reset">RESET</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

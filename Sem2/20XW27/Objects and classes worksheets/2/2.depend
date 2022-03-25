@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1615616561 source:z:\20pw27\objects and classes worksheets\2\two.cpp
+	<iostream>
+	<cmath>
+	"two.h"
+
+1615616307 z:\20pw27\objects and classes worksheets\2\two.h
+
+1615616585 source:z:\20pw27\objects and classes worksheets\2\main.cpp
+	<iostream>
+	"two.h"
+	<cmath>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        .header {
+            color: white;
+            background-color: blue;
+            padding: 0.5px;
+            text-align: center;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .c1 {
+            background-color: red;
+        }
+
+        .c2 {
+            background-color: white;
+        }
+
+        .c3 {
+            background-color: greenyellow;
+        }
+    </style>
+    <title>20PW14_WS6_3</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>This is the header of the webpage.</h1>
+    </div>
+    <div class="row">
+        <div class="column c1">
+            <p>This is the navbar. This is the navbar. This is the navbar.</p>
+        </div>
+
+        <div class="column c2">
+            <p>This is the main content. This is the main content. This is the main content.</p>
+        </div>
+
+        <div class="column c3">
+            <p>This is the navbar. This is the navbar. This is the navbar.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

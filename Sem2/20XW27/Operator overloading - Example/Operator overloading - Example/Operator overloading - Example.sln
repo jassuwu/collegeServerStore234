@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Operator overloading - Example", "Operator overloading - Example\Operator overloading - Example.vcxproj", "{7A37E9C2-B4B2-43DD-A799-5143816F4C0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A37E9C2-B4B2-43DD-A799-5143816F4C0A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7A37E9C2-B4B2-43DD-A799-5143816F4C0A}.Debug|Win32.Build.0 = Debug|Win32
+		{7A37E9C2-B4B2-43DD-A799-5143816F4C0A}.Release|Win32.ActiveCfg = Release|Win32
+		{7A37E9C2-B4B2-43DD-A799-5143816F4C0A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

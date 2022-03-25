@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1616049526 source:z:\20xw27\set union and intersection opovl\main.cpp
+	<iostream>
+	"set.h"
+
+1616049548 z:\20xw27\set union and intersection opovl\set.h
+
+1616051202 source:z:\20xw27\set union and intersection opovl\set.cpp
+	<iostream>
+	"set.h"
+

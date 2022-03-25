@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_PS4_1
+    </title>
+    <style>
+        body
+		{
+			display:flex;
+			align-items:center;
+			place-content:center;
+			height:50vh;
+            background-image:url('https://th.bing.com/th/id/OIP.z1WmJQqAh20RzvlBcpQ81wHaEK?pid=ImgDet&rs=1');
+			background-repeat:no-repeat;
+			background-size:cover;
+			width:100%;
+        }
+		img
+		{
+			border-radius:50%;
+			opacity: 0.5;
+			height:100px;
+			width:700px;
+		}
+    </style>
+</head>
+
+<body>
+	<img src="wide.png" alt="wideboi">
+</body>
+
+</html>

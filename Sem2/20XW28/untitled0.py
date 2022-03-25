@@ -1,0 +1,1 @@
+print(len(input("Enter an interger to find lenght")))

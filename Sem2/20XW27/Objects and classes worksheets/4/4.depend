@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1615618963 source:z:\20pw27\objects and classes worksheets\4\main.cpp
+	<iostream>
+	"four.h"
+
+1615618865 z:\20pw27\objects and classes worksheets\4\four.h
+
+1615619279 source:z:\20pw27\objects and classes worksheets\4\four.cpp
+	<iostream>
+	"four.h"
+

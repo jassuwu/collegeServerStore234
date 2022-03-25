@@ -1,0 +1,212 @@
+﻿Build started 3/17/2021 10:27:47 AM.
+     1>Project "Z:\20XW27\Operator overloading - Example\Time_OpOvL\Time_OpOvL\Time_OpOvL.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Time_OpOvL.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp time.cpp
+         time.cpp
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(29): error C2628: 'Time' followed by 'unsigned' is illegal (did you forget a ';'?)
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(29): error C2628: 'Time' followed by 'int' is illegal (did you forget a ';'?)
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(29): error C2347: '__w64' : can not be used with type '__w64 Time'
+     1>c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(29): error C2371: 'size_t' : redefinition; different basic types
+                 z:\20xw27\operator overloading - example\time_opovl\time_opovl\predefined c++ types (compiler internal)(19) : see declaration of 'size_t'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\time.cpp(3): error C2006: '#include' : expected a filename, found 'newline'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\time.cpp(3): fatal error C1083: Cannot open include file: '': No such file or directory
+         main.cpp
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(3): error C2143: syntax error : missing ';' before 'using'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2679: binary '<<' : no operator found which takes a right-hand operand of type 'Time' (or there is no acceptable conversion)
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(679): could be 'std::basic_ostream<_Elem,_Traits> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,const char *)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(726): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,char)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(764): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,const char *)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(811): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,char)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(937): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,const signed char *)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(944): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,signed char)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(951): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,const unsigned char *)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(958): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,unsigned char)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(968): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<char,std::char_traits<char>,Time>(std::basic_ostream<_Elem,_Traits> &&,_Ty)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>,
+                     _Ty=Time
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(1085): or       'std::basic_ostream<_Elem,_Traits> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(186): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(std::basic_ostream<_Elem,_Traits> &(__cdecl *)(std::basic_ostream<_Elem,_Traits> &))'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(192): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(std::basic_ios<_Elem,_Traits> &(__cdecl *)(std::basic_ios<_Elem,_Traits> &))'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(199): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(206): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(std::_Bool)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(226): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(short)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(260): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(unsigned short)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(280): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(int)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(305): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(unsigned int)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(325): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(long)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(345): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(unsigned long)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(366): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(__int64)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(386): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(unsigned __int64)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(407): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(float)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(427): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(double)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(447): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(long double)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(467): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(const void *)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(487): or       'std::basic_ostream<_Elem,_Traits> &std::basic_ostream<_Elem,_Traits>::operator <<(std::basic_streambuf<_Elem,_Traits> *)'
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 while trying to match the argument list '(std::ostream, Time)'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)' : could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(1085) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &&,_Ty)' : could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &&' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(968) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)' : could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(958) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)' : could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(951) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)' : could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(944) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)' : could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(937) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)' : could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(898) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)' : could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(851) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)' : could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(811) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)' : could not deduce template argument for 'std::basic_ostream<char,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(764) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)' : could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(726) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2784: 'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)' : could not deduce template argument for 'std::basic_ostream<_Elem,_Traits> &' from 'Time'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\ostream(679) : see declaration of 'std::operator <<'
+     1>z:\20xw27\operator overloading - example\time_opovl\time_opovl\main.cpp(12): error C2676: binary '<<' : 'Time' does not define this operator or a conversion to a type acceptable to the predefined operator
+         Generating Code...
+     1>Done Building Project "Z:\20XW27\Operator overloading - Example\Time_OpOvL\Time_OpOvL\Time_OpOvL.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.82
