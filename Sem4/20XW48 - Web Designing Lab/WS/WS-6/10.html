@@ -8,71 +8,101 @@
     <style>
         * {
             box-sizing: border-box;
-            padding: 0;
-        }
-
-        div {
-            border: 1px solid gray;
+            margin: 0;
         }
 
         .header {
-            background-color: rgb(182, 181, 181);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: rgb(202, 202, 202);
+            padding: 0.5px;
         }
 
-        .header img {
-            height: 50px;
-            width: 20%;
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 5px;
+            height: 15rem;
         }
 
-        .container {
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
             display: table;
+            clear: both;
         }
 
-        .header h1 {
-            display: inline-block;
+        .c1 {
+            width: 20%;
+            background-color: blue;
+            color: white;
         }
 
-        .content {
-            float: right;
-            text-transform: capitalize;
-            font-size: 30px;
-            background-color: lightgrey;
+        .c2 {
+            width: 80%;
+            background-color: white;
+        }
+
+        .c3 {
+            background-color: maroon;
+            color: white;
         }
     </style>
     <title>20PW14_WS6_10</title>
 </head>
 
 <body>
+
     <div class="header">
-        <img src="https://storm.cis.fordham.edu/harazduk/cs3400/bug.png" alt="logo">
-        <h1>DEITEL</h1>
+        <h1>Two-Column fixed layout</h1>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="content">
-                corporate training and authoring
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat ea ducimus eius labore culpa
-                consequatur dolor consequuntur aperiam deserunt animi, voluptate ipsa non debitis voluptas vitae
-                deleniti
-                minus. Tempora iusto similique architecto. Exercitationem magni itaque, voluptatibus quo consectetur
-                enim,
-                non, beatae distinctio laborum aliquid reprehenderit necessitatibus asperiores ullam molestias.</p>
+    <div class="row">
+        <div class="column c1">
+            <h2>Menu:</h2>
+            <p>This column is fixed. This column is fixed. This column is fixed. This column is fixed. This column is
+                fixed.</p>
         </div>
-        <div class="row">
-            <div class="content">
-                programming books and videos
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat ea ducimus eius labore culpa
-                consequatur dolor consequuntur aperiam deserunt animi, voluptate ipsa non debitis voluptas vitae
-                deleniti
-                minus. Tempora iusto similique architecto. Exercitationem magni itaque, voluptatibus quo consectetur
-                enim,
-                non, beatae distinctio laborum aliquid reprehenderit necessitatibus asperiores ullam molestias.</p>
+
+        <div class="column c2">
+            <h2>Content</h2>
+            <p>This column is also fixed. This column is also fixed. This column is also fixed. This column is also
+                fixed. This column is also fixed. This column is also fixed. This column is also fixed. This column is
+                also fixed. This column is also fixed.</p>
         </div>
+
+    </div>
+    <div class="header">
+        <p>footer</p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="header">
+        <h1>Three-Column fixed layout</h1>
+    </div>
+    <div class="row">
+        <div class="column c1" style="width:20%">
+            <h2>Menu:</h2>
+            <p>This column is fixed. This column is fixed. This column is fixed. This column is fixed. This column is
+                fixed.</p>
+        </div>
+
+        <div class="column c2" style="width:60%">
+            <h2>Content</h2>
+            <p>This column is also fixed. This column is also fixed. This column is also fixed. This column is also
+                fixed. This column is also fixed. This column is also fixed. This column is also fixed. This column is
+                also fixed. This column is also fixed.</p>
+        </div>
+
+        <div class="column c3" style="width:20%">
+            <h2>Sidebar</h2>
+            <p>This sidebar is fixed. This sidebar is fixed. This sidebar is fixed. This sidebar is fixed. This sidebar
+                is fixed</p>
+        </div>
+
+    </div>
+    <div class="header">
+        <p>footer</p>
     </div>
 
 </body>
