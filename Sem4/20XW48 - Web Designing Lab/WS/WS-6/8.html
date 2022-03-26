@@ -12,61 +12,112 @@
             box-sizing: border-box;
         }
 
-        .divTable {
-            display: table;
-            border: 1px solid black;
-            width: auto;
+        body {
+            background-color: #FFFFCC;
         }
 
-        .headrow {
+        .container {
+            display: flex;
+            height: 50vh;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .header {
+            height: 10vh;
+            border: 1px solid black;
+            width: 33.33%;
             background-color: white;
+            text-align: center;
+            line-height: 10vh;
         }
 
-        .divRow {
-            display: table-row;
-            width: auto;
-        }
-
-        .cell {
-            display: table-cell;
+        .c1-cell {
+            position: absolute;
+            top: 10vh;
             border: 1px solid black;
+            height: calc(50vh - 10vh);
+            width: 33.33%;
+            text-align: center;
+            background-color: #ADD8E6;
         }
 
-        .cell12,
-        .cell13 {
-            height: min-content;
+        .c1-cell p {
+            text-align: left;
+        }
+
+        ol,
+        ul {
+            list-style-position: inside;
+        }
+
+        .c2-B {
+            position: absolute;
+            top: 10vh;
+            left: 33.33%;
+            border: 1px solid black;
+            width: 33.33%;
+            height: 10vh;
+            background-color: yellow;
+            text-align: right;
+        }
+
+        .c3-C {
+            position: absolute;
+            top: 10vh;
+            left: 66.66%;
+            border: 1px solid black;
+            width: 33.33%;
+            height: 10vh;
+            background-color: red;
+            text-align: center;
+        }
+
+        .c2-c3 {
+            position: absolute;
+            top: 20vh;
+            left: 33.33%;
+            width: 66.66%;
+            height: 30vh;
+            border: 1px solid black;
+            background-color: #008000;
+            text-align: center;
         }
     </style>
     <title>20PW14_WS6_8</title>
 </head>
 
 <body>
-    <div class="divTable">
-        <div class="headrow divRow">
-            <div class="cell">Column 1</div>
-            <div class="cell">Column 2</div>
-            <div class="cell">Column 3</div>
+    <div class="container">
+        <div class="header"> Column 1
         </div>
-        <div class="divRow">
-            <div class="cell">
+        <div class="header"> Column 2
+        </div>
+        <div class="header"> Column 3
+        </div>
+        <div class="c1-cell">
+            <ol class="numbered">
                 A numbered list:
-                <ol>
-                    <li>Able</li>
-                    <li>Baker</li>
-                    <li>Charlie</li>
-                    <li>Delta</li>
-                    <li>Echo</li>
-                </ol>
-            </div>
-            <div class="cell cell12">
-                B
-            </div>
-            <div class="cell cell13">
-                C
-            </div>
+                <li>Able</li>
+                <li>Baker</li>
+                <li>Charlie</li>
+                <li>Delta</li>
+                <li>Echo</li>
+            </ol>
         </div>
-        <div class="divRow">
-
+        <div class="c2-B"> B
+        </div>
+        <div class="c3-C"> C
+        </div>
+        <div class="c2-c3">
+            <ul>
+                An unnumbered list:
+                <li>Pounds</li>
+                <li>Dollars</li>
+                <li>Euro</li>
+                <li>Yen</li>
+                <li>Roubles</li>
+            </ul>
         </div>
     </div>
 </body>

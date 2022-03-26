@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style The Dropdown Button */
+        .dropbtn {
+            background-color: #525252;
+            font-family: arial, helvetica, sans-serif;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem 3rem;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: #0E0E0E;
+            font-weight: bold;
+            padding: 0.5rem 3rem;
+            border: 1.5px solid #0E0E0E;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <title>20PW14_WS6_9</title>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Articles</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</body>
+
+</html>
