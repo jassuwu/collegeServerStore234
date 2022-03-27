@@ -1,3 +1,2 @@
-The readme.md
-# sem
+# EHEHEHEHE
 All the shit for and from college. 
