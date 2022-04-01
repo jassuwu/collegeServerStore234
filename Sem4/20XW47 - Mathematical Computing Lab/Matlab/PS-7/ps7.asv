@@ -168,7 +168,7 @@ G(s) = laplace(one) * laplace(sin(2*t));
 H(s) = laplace(exp(t)) * laplace(exp(-t));
 J(s) = laplace(exp(t)) * laplace(t);
 K(s) = laplace(cos(2*t)) * laplace(sin(3*t));
-    
+
 ilaplace(F)
 ilaplace(G)
 ilaplace(H)
