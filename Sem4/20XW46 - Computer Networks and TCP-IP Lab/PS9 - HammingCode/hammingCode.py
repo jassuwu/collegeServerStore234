@@ -51,7 +51,7 @@ for i in range(r):
 #printing our the error and correcting it
 if errorBit:
     print('Error at bit position:', errorBit)
-    recvCode[errorBit - 1] ^= 1
+    recvCode[errorBit - 1] ^= 1  #correction of the errorBit
     print('and the correct code is ' + "".join([str(x) for x in recvCode]))
 else:
     print('There is no error.')
