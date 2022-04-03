@@ -1,5 +1,5 @@
 #EmitterSide
-dataW = input('Enter a binary data: ')
+dataW = input('Enter data: ')
 codeW = [int(x) for x in dataW]
 m = len(dataW)
 r = 1
