@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS8_5</title>
+</head>
+
+<body>
+    <button id="sumButton">Calc Sum</button>
+    <button id="bgButton">Change BG</button>
+    <script>
+        const worker = new Worker('5worker.js')
+        const sumBtn = document.getElementById("sumButton");
+        const bgBtn = document.getElementById("bgButton");
+
+        sumBtn.addEventListener("click", function () {
+            worker.postMessage("hello, worker :D")
+        })
+
+        worker.onmessage = function (message) {
+            alert(`The final sum is ${message.data}`)
+        }
+
+        bgButton.addEventListener("click", function () {
+            if (document.body.style.background == "blue")
+                document.body.style.background = "red"
+            else
+                document.body.style.background = "blue"
+        })
+    </script>
+</body>
+
+</html>

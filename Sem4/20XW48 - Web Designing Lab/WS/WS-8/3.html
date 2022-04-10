@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS8_3</title>
+</head>
+
+<body>
+    <h2 class="result">
+
+    </h2>
+    <script>
+        function isEmail(str) {
+
+            //valid email regexp
+            regexp = /^\w+([\.!#$%&'*+/=?^_`{|}~-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            if (regexp.test(str)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        let mail1 = `mail@mail.com`
+        let mail2 = `.mail@mail.com`
+        //testcases
+        document.querySelector(".result").innerHTML = mail1 + " => " + isEmail(mail1)
+        document.querySelector(".result").innerHTML += "<br>"
+        document.querySelector(".result").innerHTML += mail2 + " => " + isEmail(mail2)
+    </script>
+</body>
+
+</html>
