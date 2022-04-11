@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS8_2</title>
+</head>
+
+<body>
+    <h1 class="string">
+
+    </h1>
+    <h1 class="result">
+
+    </h1>
+    <script>
+        let string = "Ligmaballs"
+        document.querySelector(".string").textContent = string
+
+        //function to check capitalization
+        function isCapitalized(str) {
+            regexp = /[A-Z]/;
+            if (regexp.test(str)) {
+                return 1
+            }
+            else {
+                return 0
+            }
+        }
+
+        if (isCapitalized(string)) {
+            document.querySelector(".result").textContent = "It is capitalized."
+        }
+        else {
+            document.querySelector(".result").textContent = "It is not capitalized."
+        }
+    </script>
+</body>
+
+</html>

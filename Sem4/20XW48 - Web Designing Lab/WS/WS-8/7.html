@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20PW14_WS8_7</title>
+</head>
+
+<body>
+    <p><button id="counterBtn" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Click the button to see the storage functionality.</p>
+    <p>Reload the page, close the browser, window, or tab and the localStorage counter won't be reset. But the
+        sessionStorage counter will reset.</p>
+    <script>
+        const counterBtn = document.getElementById("counterBtn")
+        counterBtn.addEventListener("click", clickCounter)
+        function clickCounter() {
+            if (typeof (Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s) in total. <br>";
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML += "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+</body>
+
+</html>
