@@ -5,23 +5,25 @@ s = socket.socket()
 host = socket.gethostname()
 port = 65456
 s.connect((host, port))
+s.settimeout(1)
+
 
 sn = 0
 request = ['0', '1', '0', '1', '0', '1']
 canSend = True
 while (sn < len(request)):
-    print(f"sn = {sn}, length of request = {len(request)}")
     if (canSend):
         s.send(request[sn].encode())
         canSend = False
         sn += 1
         if (sn == len(request)):
             break
-    ACK = s.recv(1024).decode()
-    if ACK != request[sn]:
+    try:
+        ACK = s.recv(1024).decode()
+        print(f"Received ACK {ACK}")
+    except:
         sn -= 1
         print("Correct ACK not received. Initiating retransmission...")
-    else:
-        canSend = True
+    canSend = True
 print("Transmission ended.")
 s.close()
