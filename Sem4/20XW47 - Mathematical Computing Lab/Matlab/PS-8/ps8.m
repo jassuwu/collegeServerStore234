@@ -29,3 +29,14 @@ clc;
 % an=1/l*(int(f*cos(n*pi/l*x),x,-pi/2,0)+int(-f*cos(n*pi/l*x),x,0,pi/2));
 % bn=1/l*(int(f*sin(n*pi/l*x),x,-pi/2,0)+int(-f*sin(n*pi/l*x),x,0,pi/2));
 % [a0/2,eval(subs(an*cos(n*pi*x/l)+bn*sin(n*pi*x/l),n,[1 2 3 4]))]
+
+%3
+
+% syms n x;
+% f=(-4*x/pi);
+% l=pi/2;
+% 
+% a0=1/l*(int(f,x,-pi/2,0)+int(-f,x,0,pi/2));
+% an=1/l*(int(f*cos(n*pi/l*x),x,-pi/2,0)+int(-f*cos(n*pi/l*x),x,0,pi/2));
+% bn=1/l*(int(f*sin(n*pi/l*x),x,-pi/2,0)+int(-f*sin(n*pi/l*x),x,0,pi/2));
+% [a0/2,eval(subs(an*cos(n*pi*x/l)+bn*sin(n*pi*x/l),n,[1 2 3 4]))]
