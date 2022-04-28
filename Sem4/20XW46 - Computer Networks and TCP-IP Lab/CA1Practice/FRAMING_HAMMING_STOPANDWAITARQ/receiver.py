@@ -15,7 +15,7 @@ ESC = '10100011'
 framedCode = framedCode.replace(FLAG, ' ').split()
 
 #HammingCorrection
-unHammmedCode = []
+unHammedCode = []
 for frame in framedCode:
     dataW = [int(x) for x in frame]
     n = len(dataW)
@@ -50,10 +50,28 @@ for frame in framedCode:
     dataW = newDataW
     dataW.reverse()
     dataW = [str(x) for x in dataW]
-    unHammmedCode.append(''.join(dataW))
+    unHammedCode.append(''.join(dataW))
 
 #Unbitstuffing the data
-unHammmedCode = ' '.join(unHammmedCode)
-unHammmedCode = unHammmedCode.replace('0111110', '011111')
+unHammedCode = ''.join(unHammedCode)
+unHammedCode = unHammedCode.replace('0111110', '011111')
 
-print(unHammmedCode)
+#Degrouping the 4 8bit binaries to singles
+degroupedCode = [unHammedCode[i:i + 8] for i in range(0, len(unHammedCode), 8)]
+
+#byteDecoding the message
+byteDecodedCode = []
+for byte in degroupedCode:
+    if byte == ESC:
+        byteDecodedCode.append('ESC')
+    elif byte == FLAG:
+        byteDecodedCode.append('FLAG')
+    else:
+        byteDecodedCode.append(chr(int(byte, 2)))
+byteDecodedCode = ' '.join(byteDecodedCode)
+
+#byte Unstufffing
+byteDecodedCode = byteDecodedCode.replace('ESC ESC', 'ESC')
+byteDecodedCode = byteDecodedCode.replace('ESC FLAG', 'FLAG')
+
+print("MESSAGE RECIEVED : ", byteDecodedCode)

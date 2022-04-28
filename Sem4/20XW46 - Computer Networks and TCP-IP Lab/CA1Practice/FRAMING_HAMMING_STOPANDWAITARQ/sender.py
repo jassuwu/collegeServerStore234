@@ -35,8 +35,8 @@ binaryCode = [
     ''.join(binaryCode[i:i + 4])
     for i in range(0, len(binaryCode), 4)  #Grouping four 8bitstrings into one
 ]
-print("Code before Hamming: ", binaryCode)
-hammingedCode = []
+
+hammingedCode = []  #Hamming
 for tt in binaryCode:
     dataW = [int(x) for x in tt]
     dataW.reverse()
