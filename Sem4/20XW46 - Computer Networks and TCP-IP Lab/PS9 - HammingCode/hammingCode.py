@@ -19,7 +19,7 @@ for i in range(r):
         if (j + 1) % (2**i) == 0:
             j += 2**i
         j += 1
-    dataW[2**i - 1] = value  #changing parity bit values
+    dataW[2**i - 1] = value % 2  #changing parity bit values
 
 print('Resulting code word: ' + "".join([str(x) for x in dataW]))
 
