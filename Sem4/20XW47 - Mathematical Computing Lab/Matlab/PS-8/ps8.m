@@ -43,7 +43,7 @@ clc;
 % 
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))]
 % 
-% fplot(sum(exp(1,1)),[0 2*l])
+% fplot(sum(exp(1,1)),[0 2*L])
 % hold on
 % fplot(sum(exp(1,1:2)),[0 2*L])
 % fplot(sum(exp(1,1:3)),[0 2*L])
@@ -56,25 +56,25 @@ clc;
 
 
 % 3b
-% syms n x;
-% f=piecewise(-1 < x < 0, 1, 0 < x < 1, x);
-% L=1;
-% 
-% a0=1/L*(int(f,x,-1,0)+int(f,0,1));
-% an=1/L*(int(f*cos(n*pi*x/L),-1,0)+int(f*cos(n*pi*x/L),0,1));
-% bn=1/L*(int(f*sin(n*pi*x/L),-1,0)+int(f*sin(n*pi*x/L),0,1));
-% 
-% exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
-% 
-% fplot(sum(exp(1,1)),[0 2*l])
-% hold on
-% fplot(sum(exp(1,1:2)),[0 2*L])
-% fplot(sum(exp(1,1:3)),[0 2*L])
-% fplot(sum(exp(1,1:4)),[0 2*L])
-% fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
-% fplot(f,[0 2*L]) %Function Plot
-% hold off
-% legend('1','2','3','4','5','realboi')
+syms n x;
+f=piecewise(-1 < x < 0, 1, 0 < x < 1, x);
+L=1;
+
+a0=1/L*(int(f,x,-1,0)+int(f,0,1));
+an=1/L*(int(f*cos(n*pi*x/L),-1,0)+int(f*cos(n*pi*x/L),0,1));
+bn=1/L*(int(f*sin(n*pi*x/L),-1,0)+int(f*sin(n*pi*x/L),0,1));
+
+exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
+
+fplot(sum(exp(1,1)),[0 2*L])
+hold on
+fplot(sum(exp(1,1:2)),[0 2*L])
+fplot(sum(exp(1,1:3)),[0 2*L])
+fplot(sum(exp(1,1:4)),[0 2*L])
+fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
+fplot(f,[0 2*L]) %Function Plot
+hold off
+legend('1','2','3','4','5','realboi')
 
 
 % 3c
@@ -88,7 +88,7 @@ clc;
 % 
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
 % 
-% fplot(sum(exp(1,1)),[0 2*l])
+% fplot(sum(exp(1,1)),[0 2*L])
 % hold on
 % fplot(sum(exp(1,1:2)),[0 2*L])
 % fplot(sum(exp(1,1:3)),[0 2*L])
