@@ -44,8 +44,11 @@ clc;
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
 % 
 % fplot(sum(exp),[0 2]) %Fourier Plot
+% title("Fourier plot")
 % figure()
 % fplot(f,[0 2]) %Function Plot
+% title("Function plot")
+
 
 % 3b
 % syms n x;
@@ -59,8 +62,10 @@ clc;
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
 % 
 % fplot(sum(exp),[-1 1]) %Fourier Plot
+% title("Fourier plot")
 % figure()
 % fplot(f,[-1 1]) %Function Plot
+% title("Function plot")
 
 % 3c
 % syms n x;
@@ -74,24 +79,127 @@ clc;
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
 % 
 % fplot(sum(exp),[-pi pi]) %Fourier Plot
+% title("Fourier plot")
 % figure()
 % fplot(f,[-pi pi]) %Function Plot
+% title("Function plot")
+
+% 4
+
+% 4a
+
+% syms x n;
+% 
+% f=piecewise(0 < x < 3, x^2);
+% L=3;
+% 
+% a0=2/L*(int(f,x,0,3));
+% an=2/L*(int(f*cos(n*pi*x/L),0,3));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,3));
+% 
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))]  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))]  %sine half-range
+
+% 4b
+
+% syms x n;
+% 
+% f=piecewise(0 < x < pi/2, pi/2, pi/2 < x < pi, pi - x);
+% L=pi;
+% 
+% a0=2/L*(int(f,x,0,pi/2)+int(f,x,pi/2,pi));
+% an=2/L*(int(f*cos(n*pi*x/L),0,pi/2)+int(f*cos(n*pi*x/L),x,pi/2,pi));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,pi/2)+int(f*sin(n*pi*x/L),x,pi/2,pi));
+% 
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))]  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))]  %sine half-range
+% 
+
+%4c
+% 
+% syms x n;
+% 
+% f=piecewise(0 < x < 2, x - 1, 2 < x < 4, 3 - x);
+% L=4;
+% 
+% a0=2/L*(int(f,x,0,2)+int(f,x,2,4));
+% an=2/L*(int(f*cos(n*pi*x/L),0,2)+int(f*cos(n*pi*x/L),x,2,4));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,2)+int(f*sin(n*pi*x/L),x,2,4));
+%
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))]  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))]  %sine half-range
+% 
 
 
+% 3
+
+% 5a
+
+% syms x n;
+% 
+% f=piecewise(0 < x < pi/2, x, pi/2 < x < pi, pi/2);
+% L=pi;
+% 
+% a0=2/L*(int(f,x,0,pi/2)+int(f,pi/2,pi));
+% an=2/L*(int(f*cos(n*pi*x/L),0,pi/2)+int(f*cos(n*pi*x/L),pi/2,pi));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,pi/2)+int(f*sin(n*pi*x/L),pi/2,pi));
+% 
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))];  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))];  %sine hlaf-range
+% 
+% fplot(sum(halfCos),[0 pi]) %HalfCos Plot
+% title("Half cosine");
+% figure()
+% fplot(sum(halfSin),[0 pi]) %HalfSin Plot
+% title("Half sine");
+% figure()
+% fplot(f,[0 pi]) %Function Plot
+% title("Function Plot");
 
 
+% 5b
+
+% syms x n;
+% 
+% f=piecewise(0 < x < pi/2, x, pi/2 < x < pi, pi - x);
+% L=pi;
+% 
+% a0=2/L*(int(f,x,0,pi/2)+int(f,pi/2,pi));
+% an=2/L*(int(f*cos(n*pi*x/L),0,pi/2)+int(f*cos(n*pi*x/L),pi/2,pi));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,pi/2)+int(f*sin(n*pi*x/L),pi/2,pi));
+% 
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))];  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))];
+% 
+% fplot(sum(halfCos),[0 pi]) %HalfCos Plot
+% title("Half cosine");
+% figure()
+% fplot(sum(halfSin),[0 pi]) %HalfSin Plot
+% title("Half sine");
+% figure()
+% fplot(f,[0 pi]) %Function Plot
+% title("Function Plot");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+% 5c
+% 
+% syms x n;
+% 
+% f=piecewise(0 < x < 2, 0, 2 < x < 4, 1);
+% L=4;
+% 
+% a0=2/L*(int(f,x,0,2)+int(f,2,4));
+% an=2/L*(int(f*cos(n*pi*x/L),0,2)+int(f*cos(n*pi*x/L),2,4));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,2)+int(f*sin(n*pi*x/L),2,4));
+% 
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))];  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))];
+% 
+% fplot(sum(halfCos),[0 4]) %HalfCos Plot
+% title("Half cosine");
+% figure()
+% fplot(sum(halfSin),[0 4]) %HalfSin Plot
+% title("Half sine");
+% figure()
+% fplot(f,[0 4]) %Function Plot
+% title("Function Plot");
