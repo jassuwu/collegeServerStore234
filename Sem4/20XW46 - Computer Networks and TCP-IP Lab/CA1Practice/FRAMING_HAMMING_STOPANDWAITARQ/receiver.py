@@ -5,14 +5,33 @@ s.bind((socket.gethostname(), 65456))
 s.listen(5)
 
 c, addr = s.accept()
-framedCode = c.recv(1024).decode()
+
+frameSeq = [0, 1, 0]
+rn = 0
+sawCode = []
+
+while rn < len(frameSeq):
+    byte = c.recv(1024).decode()
+    sawCode.append(byte)
+    rn += 1
+    if rn >= len(frameSeq):
+        print("Received all frames")
+        break
+    else:
+        print(f"Sending ACK {frameSeq[rn]}")
+        c.send(str(frameSeq[rn]).encode())
+
+# framedCode = c.recv(1024).decode()
 
 #FLAG and ESC
 FLAG = '01111110'
 ESC = '10100011'
 
+print(sawCode)
+
 #Unframing
-framedCode = framedCode.replace(FLAG, ' ').split()
+# framedCode = framedCode.replace(FLAG, ' ').split()
+framedCode = ''.join(sawCode).replace(FLAG, ' ').split()
 
 #HammingCorrection
 unHammedCode = []
@@ -39,7 +58,7 @@ for frame in framedCode:
         dataW[errBit - 1] ^= 1  #correction of the errorBit
         print('and the correct code is ' + "".join([str(x) for x in dataW]))
     else:
-        print('There is no error.')
+        print('Frame is error free.')
     removalIndex = []
     for i in range(r):
         removalIndex.append(2**i - 1)

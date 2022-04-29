@@ -4,6 +4,7 @@ import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((socket.gethostname(), 65456))
+s.settimeout(2)
 
 #FLAG and ESC
 FLAG = '01111110'
@@ -64,5 +65,27 @@ for tt in binaryCode:
 
 #Framing the data after applying HammingCode
 framedCode = [FLAG + i + FLAG for i in hammingedCode]
-framedCode = ''.join(framedCode)
-s.send(framedCode.encode())
+
+#Sequencing the Frames
+seqNo = 0
+frameSeq = []
+for i in range(len(framedCode)):
+    frameSeq.append(str(seqNo))
+    seqNo = 1 if seqNo == 0 else 0
+# s.send(framedCode.encode())
+
+sn = 0
+canSend = True
+
+while (sn < len(frameSeq)):
+    s.send(framedCode[sn].encode())
+    print(f"Sent {sn+1}th frame.")
+    sn += 1
+    if sn == len(frameSeq):
+        break
+    else:
+        if (s.recv(1024).decode() == frameSeq[sn]):
+            print(f"ACK {frameSeq[sn]} received.")
+        else:
+            print("Transmission failed. Retransmitting...")
+            sn -= 1
