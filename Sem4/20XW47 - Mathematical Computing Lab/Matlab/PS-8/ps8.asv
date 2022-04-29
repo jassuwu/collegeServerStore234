@@ -33,26 +33,25 @@ clc;
 % 3
 
 % 3a
-% syms n x;
-% f=piecewise(0 < x < 1, pi*x, 1 < x < 2, pi*(2-x));
-% L=1;
-% 
-% a0=1/L*(int(f,x,0,1)+int(f,1,2));
-% an=1/L*(int(f*cos(n*pi*x/L),0,1)+int(f*cos(n*pi*x/L),1,2));
-% bn=1/L*(int(f*sin(n*pi*x/L),0,1)+int(f*sin(n*pi*x/L),1,2));
-% 
-% exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))]
-% 
-% fplot(sum(exp(1,1)),[0 2*l])
-% hold on
-% fplot(sum(exp(1,1:2)),[0 2*L])
-% fplot(sum(exp(1,1:3)),[0 2*L])
-% fplot(sum(exp(1,1:4)),[0 2*L])
-% fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
-% fplot(f,[0 2*L]) %Function Plot
-% hold off
-% legend('1','2','3','4','5','realboi')
+syms n x;
+f=piecewise(0 < x < 1, pi*x, 1 < x < 2, pi*(2-x));
+L=1;
 
+a0=1/L*(int(f,x,0,1)+int(f,1,2));
+an=1/L*(int(f*cos(n*pi*x/L),0,1)+int(f*cos(n*pi*x/L),1,2));
+bn=1/L*(int(f*sin(n*pi*x/L),0,1)+int(f*sin(n*pi*x/L),1,2));
+
+exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))]
+
+fplot(sum(exp(),[0 2])
+fplot(sum(exp),[0 2])
+fplot(sum(exp),[0 2])
+fplot(sum(exp),[0 2])
+fplot(sum(exp),[0 2]) %Fourier Plot
+title("Fourier plot")
+figure()
+fplot(f,[0 2]) %Function Plot
+title("Function plot")
 
 
 % 3b
@@ -66,16 +65,11 @@ clc;
 % 
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
 % 
-% fplot(sum(exp(1,1)),[0 2*l])
-% hold on
-% fplot(sum(exp(1,1:2)),[0 2*L])
-% fplot(sum(exp(1,1:3)),[0 2*L])
-% fplot(sum(exp(1,1:4)),[0 2*L])
-% fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
-% fplot(f,[0 2*L]) %Function Plot
-% hold off
-% legend('1','2','3','4','5','realboi')
-
+% fplot(sum(exp),[-1 1]) %Fourier Plot
+% title("Fourier plot")
+% figure()
+% fplot(f,[-1 1]) %Function Plot
+% title("Function plot")
 
 % 3c
 % syms n x;
@@ -88,15 +82,11 @@ clc;
 % 
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
 % 
-% fplot(sum(exp(1,1)),[0 2*l])
-% hold on
-% fplot(sum(exp(1,1:2)),[0 2*L])
-% fplot(sum(exp(1,1:3)),[0 2*L])
-% fplot(sum(exp(1,1:4)),[0 2*L])
-% fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
-% fplot(f,[0 2*L]) %Function Plot
-% hold off
-% legend('1','2','3','4','5','realboi')
+% fplot(sum(exp),[-pi pi]) %Fourier Plot
+% title("Fourier plot")
+% figure()
+% fplot(f,[-pi pi]) %Function Plot
+% title("Function plot")
 
 % 4
 
@@ -107,11 +97,12 @@ clc;
 % f=piecewise(0 < x < 3, x^2);
 % L=3;
 % 
-% a0=2/L*(int(f,x,0,3))
-% an=2/L*(int(f*cos(n*pi*x/L),0,3))
-% bn=2/L*(int(f*sin(n*pi*x/L),0,3))
+% a0=2/L*(int(f,x,0,3));
+% an=2/L*(int(f*cos(n*pi*x/L),0,3));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,3));
 % 
-
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))]  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))]  %sine half-range
 
 % 4b
 
@@ -120,11 +111,13 @@ clc;
 % f=piecewise(0 < x < pi/2, pi/2, pi/2 < x < pi, pi - x);
 % L=pi;
 % 
-% a0=2/L*(int(f,x,0,pi/2)+int(f,x,pi/2,pi))
-% an=2/L*(int(f*cos(n*pi*x/L),0,pi/2)+int(f*cos(n*pi*x/L),x,pi/2,pi))
-% bn=2/L*(int(f*sin(n*pi*x/L),0,pi/2)+int(f*sin(n*pi*x/L),x,pi/2,pi))
+% a0=2/L*(int(f,x,0,pi/2)+int(f,x,pi/2,pi));
+% an=2/L*(int(f*cos(n*pi*x/L),0,pi/2)+int(f*cos(n*pi*x/L),x,pi/2,pi));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,pi/2)+int(f*sin(n*pi*x/L),x,pi/2,pi));
 % 
-
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))]  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))]  %sine half-range
+% 
 
 %4c
 % 
@@ -133,10 +126,12 @@ clc;
 % f=piecewise(0 < x < 2, x - 1, 2 < x < 4, 3 - x);
 % L=4;
 % 
-% a0=2/L*(int(f,x,0,2)+int(f,x,2,4))
-% an=2/L*(int(f*cos(n*pi*x/L),0,2)+int(f*cos(n*pi*x/L),x,2,4))
-% bn=2/L*(int(f*sin(n*pi*x/L),0,2)+int(f*sin(n*pi*x/L),x,2,4))
+% a0=2/L*(int(f,x,0,2)+int(f,x,2,4));
+% an=2/L*(int(f*cos(n*pi*x/L),0,2)+int(f*cos(n*pi*x/L),x,2,4));
+% bn=2/L*(int(f*sin(n*pi*x/L),0,2)+int(f*sin(n*pi*x/L),x,2,4));
 %
+% halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))]  %cosine half-range
+% halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))]  %sine half-range
 % 
 
 
