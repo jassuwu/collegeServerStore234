@@ -30,7 +30,6 @@ ESC = '10100011'
 print(sawCode)
 
 #Unframing
-# framedCode = framedCode.replace(FLAG, ' ').split()
 framedCode = ''.join(sawCode).replace(FLAG, ' ').split()
 
 #HammingCorrection
