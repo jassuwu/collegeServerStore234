@@ -56,25 +56,25 @@ clc;
 
 
 % 3b
-syms n x;
-f=piecewise(-1 < x < 0, 1, 0 < x < 1, x);
-L=1;
-
-a0=1/L*(int(f,x,-1,0)+int(f,0,1));
-an=1/L*(int(f*cos(n*pi*x/L),-1,0)+int(f*cos(n*pi*x/L),0,1));
-bn=1/L*(int(f*sin(n*pi*x/L),-1,0)+int(f*sin(n*pi*x/L),0,1));
-
-exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
-
-fplot(sum(exp(1,1)),[0 2*L])
-hold on
-fplot(sum(exp(1,1:2)),[0 2*L])
-fplot(sum(exp(1,1:3)),[0 2*L])
-fplot(sum(exp(1,1:4)),[0 2*L])
-fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
-fplot(f,[0 2*L]) %Function Plot
-hold off
-legend('1','2','3','4','5','realboi')
+% syms n x;
+% f=piecewise(-1 < x < 0, 1, 0 < x < 1, x);
+% L=1;
+% 
+% a0=1/L*(int(f,x,-1,0)+int(f,0,1));
+% an=1/L*(int(f*cos(n*pi*x/L),-1,0)+int(f*cos(n*pi*x/L),0,1));
+% bn=1/L*(int(f*sin(n*pi*x/L),-1,0)+int(f*sin(n*pi*x/L),0,1));
+% 
+% exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))];
+% 
+% fplot(sum(exp(1,1)),[0 2*L])
+% hold on
+% fplot(sum(exp(1,1:2)),[0 2*L])
+% fplot(sum(exp(1,1:3)),[0 2*L])
+% fplot(sum(exp(1,1:4)),[0 2*L])
+% fplot(sum(exp(1,1:5)),[0 2*L]) %Fourier Plot
+% fplot(f,[0 2*L]) %Function Plot
+% hold off
+% legend('1','2','3','4','5','realboi')
 
 
 % 3c
@@ -114,7 +114,7 @@ legend('1','2','3','4','5','realboi')
 
 
 % 4b
-
+% 
 % syms x n;
 % 
 % f=piecewise(0 < x < pi/2, pi/2, pi/2 < x < pi, pi - x);
@@ -156,14 +156,28 @@ legend('1','2','3','4','5','realboi')
 % halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))];  %cosine half-range
 % halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))];  %sine hlaf-range
 % 
-% fplot(sum(halfCos),[0 pi]) %HalfCos Plot
+% fplot(sum(halfCos(1,1)),[0 L]) %HalfCos Plot
+% hold on
+% fplot(sum(halfCos(1,1:2)),[0 L])
+% fplot(sum(halfCos(1,1:3)),[0 L])
+% fplot(sum(halfCos(1,1:4)),[0 L])
+% fplot(sum(halfCos(1,1:5)),[0 L])
+% fplot(f,[0 L])
+% hold off
+% legend('1','2','3','4','5','realboi')
 % title("Half cosine");
+% 
 % figure()
-% fplot(sum(halfSin),[0 pi]) %HalfSin Plot
+% 
+% fplot(sum(halfSin(1,1)),[0 L]) %HalfSin Plot
+% hold on
+% fplot(sum(halfSin(1,1:2)),[0 L])
+% fplot(sum(halfSin(1,1:3)),[0 L])
+% fplot(sum(halfSin(1,1:4)),[0 L])
+% fplot(f,[0 L])
+% hold off
+% legend('1','2','3','4','realboi')
 % title("Half sine");
-% figure()
-% fplot(f,[0 pi]) %Function Plot
-% title("Function Plot");
 
 
 % 5b
@@ -180,14 +194,28 @@ legend('1','2','3','4','5','realboi')
 % halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))];  %cosine half-range
 % halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))];
 % 
-% fplot(sum(halfCos),[0 pi]) %HalfCos Plot
+% fplot(sum(halfCos(1,1)),[0 L]) %HalfCos Plot
+% hold on
+% fplot(sum(halfCos(1,1:2)),[0 L])
+% fplot(sum(halfCos(1,1:3)),[0 L])
+% fplot(sum(halfCos(1,1:4)),[0 L])
+% fplot(sum(halfCos(1,1:5)),[0 L])
+% fplot(f,[0 L])
+% hold off
+% legend('1','2','3','4','5','realboi')
 % title("Half cosine");
+% 
 % figure()
-% fplot(sum(halfSin),[0 pi]) %HalfSin Plot
+% 
+% fplot(sum(halfSin(1,1)),[0 L]) %HalfSin Plot
+% hold on
+% fplot(sum(halfSin(1,1:2)),[0 L])
+% fplot(sum(halfSin(1,1:3)),[0 L])
+% fplot(sum(halfSin(1,1:4)),[0 L])
+% fplot(f,[0 L])
+% hold off
+% legend('1','2','3','4','realboi')
 % title("Half sine");
-% figure()
-% fplot(f,[0 pi]) %Function Plot
-% title("Function Plot");
 
 
 % 5c
@@ -204,11 +232,25 @@ legend('1','2','3','4','5','realboi')
 % halfCos = [a0/2,(subs(an*cos(n*pi*x/L),n,[1 2 3 4]))];  %cosine half-range
 % halfSin = [(subs(bn*sin(n*pi*x/L),n,[1,2,3,4]))];
 % 
-% fplot(sum(halfCos),[0 4]) %HalfCos Plot
+% fplot(sum(halfCos(1,1)),[0 L]) %HalfCos Plot
+% hold on
+% fplot(sum(halfCos(1,1:2)),[0 L])
+% fplot(sum(halfCos(1,1:3)),[0 L])
+% fplot(sum(halfCos(1,1:4)),[0 L])
+% fplot(sum(halfCos(1,1:5)),[0 L])
+% fplot(f,[0 L])
+% hold off
+% legend('1','2','3','4','5','realboi')
 % title("Half cosine");
+% 
 % figure()
-% fplot(sum(halfSin),[0 4]) %HalfSin Plot
+% 
+% fplot(sum(halfSin(1,1)),[0 L]) %HalfSin Plot
+% hold on
+% fplot(sum(halfSin(1,1:2)),[0 L])
+% fplot(sum(halfSin(1,1:3)),[0 L])
+% fplot(sum(halfSin(1,1:4)),[0 L])
+% fplot(f,[0 L])
+% hold off
+% legend('1','2','3','4','realboi')
 % title("Half sine");
-% figure()
-% fplot(f,[0 4]) %Function Plot
-% title("Function Plot");
