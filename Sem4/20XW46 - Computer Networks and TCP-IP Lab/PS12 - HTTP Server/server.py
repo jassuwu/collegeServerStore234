@@ -18,11 +18,14 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
         ]) + '\n\n\n\n'
         with open('db.txt', 'a+') as f:
             f.write(data)
-        self.send_response(201, "Created")
-        self.wfile.write("Your submission was saved\n".encode())
+        self.send_response(301)
+        self.send_header('Location','localhost:65456')
+        self.end_headers()
         return
 
 
 handler_object = MyHttpRequestHandler
 my_server = socketserver.TCPServer(('localhost', 65456), handler_object)
 my_server.serve_forever()
+
+
