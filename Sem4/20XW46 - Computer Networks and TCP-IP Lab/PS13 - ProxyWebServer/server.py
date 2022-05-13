@@ -31,7 +31,7 @@ def main():
             data = conn.recv(buffer_size).decode()
             th = threading.Thread(target=conn_string, args=(conn, data, addr))
             th.start()
-        except Exception as e:
+        except:
             s.close()
             print("\n[Server] Shutting down...")
             sys.exit(1)
@@ -91,7 +91,7 @@ def proxy_server(webserver, port, conn, data, addr):
                 break
         s.close()
         conn.close()
-    except OSError as e:
+    except:
         s.close()
         conn.close()
         sys.exit(1)
