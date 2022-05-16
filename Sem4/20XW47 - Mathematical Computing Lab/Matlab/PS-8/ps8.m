@@ -11,6 +11,7 @@ clc;
 % 
 % [a0/2,eval(subs(an*cos(n*pi*x/l)+bn*sin(n*pi*x/l),n,[1 2 3 4]))]
 
+% 
 % syms n x;
 % f=exp(-x);
 % l=pi;
@@ -20,7 +21,7 @@ clc;
 % bn=1/l*int(f*sin(n*pi*x/l),x,0,2*pi);
 % [a0/2,eval(subs(an*cos(n*pi*x/l)+bn*sin(n*pi*x/l),n,[1 2 3 4]))]
 % 
-
+% 
 % syms n x;
 % f=(-4*x/pi);
 % l=pi/2;
@@ -37,9 +38,9 @@ clc;
 % f=piecewise(0 < x < 1, pi*x, 1 < x < 2, pi*(2-x));
 % L=1;
 % 
-% a0=1/L*(int(f,x,0,1)+int(f,1,2));
-% an=1/L*(int(f*cos(n*pi*x/L),0,1)+int(f*cos(n*pi*x/L),1,2));
-% bn=1/L*(int(f*sin(n*pi*x/L),0,1)+int(f*sin(n*pi*x/L),1,2));
+% a0=1/L*(int(f,x,0,2));
+% an=1/L*(int(f*cos(n*pi*x/L),x , 0, 2));
+% bn=1/L*(int(f*sin(n*pi*x/L),x ,0, 2));
 % 
 % exp = [a0/2,(subs(an*cos(n*pi*x/L)+bn*sin(n*pi*x/L),n,[1 2 3 4]))]
 % 
@@ -143,7 +144,7 @@ clc;
 % 5
 
 % 5a
-% 
+
 % syms x n;
 % 
 % f=piecewise(0 < x < pi/2, x, pi/2 < x < pi, pi/2);

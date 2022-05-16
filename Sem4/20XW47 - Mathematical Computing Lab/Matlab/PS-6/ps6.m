@@ -1,3 +1,6 @@
+clear;
+clc;
+
 %1
 
 % syms x;
@@ -92,10 +95,15 @@
 
 %6
 
-syms x;
+% syms y(x);
+% 
+% dsolve (diff(y) + (cos(x)*y) == sin(x)*cos(x))
 
-a(x) = exp(3*x) + sin(x);
-int(a,-inf,inf)
 
+%7
+% syms y(x);
+% dy =diff(y);
+% ddy = diff(y,2);
+% dsolve(diff(y,3) == y-x*dy+4*ddy,[y(2)== 1 dy(2)==1/2 ddy(2)== 0])
 
 

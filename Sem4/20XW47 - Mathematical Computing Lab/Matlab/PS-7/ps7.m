@@ -1,7 +1,10 @@
 %20PW14. 
 
+clear;
+clc;
+
 %1
-% 
+
 % syms t;
 % f(t) = 3*t^2 + 4*t +5;
 % g(t) = cos(t)^2 + 2*exp(-3*t) - 7;
@@ -43,30 +46,30 @@
 % j(t) = sin(3*t) + 3*t*cos(3*t);
 % k(t) = t*exp(-2*t)*cos(3*t);
 % 
+% subplot(2,1,1);
 % fplot(f);
-% hold on
+% subplot(2,1,2);
 % fplot(laplace(f))
-% hold off
 % figure()
+% subplot(2,1,1);
 % fplot(g);
-% hold on
+% subplot(2,1,2);
 % fplot(laplace(g))
-% hold off
 % figure()
+% subplot(2,1,1);
 % fplot(h);
-% hold on
+% subplot(2,1,2);
 % fplot(laplace(h))
-% hold off
 % figure()
+% subplot(2,1,1);
 % fplot(j);
-% hold on
+% subplot(2,1,2);
 % fplot(laplace(j))
-% hold off
 % figure()
-% fplot(k);
-% hold on
-% fplot(laplace(k))
-% hold off
+% subplot(2,1,1);
+% fplot(k, [0 100]);
+% subplot(2,1,2);
+% fplot(laplace(k),[0 100])
 
 %4
 
@@ -161,29 +164,29 @@
 
 %6
 
-syms t s;
-one(t) = t^0; %1
-F(s) = laplace(one) * laplace(one);
-G(s) = laplace(one) * laplace(sin(2*t));
-H(s) = laplace(exp(t)) * laplace(exp(-t));
-J(s) = laplace(exp(t)) * laplace(t);
-K(s) = laplace(cos(2*t)) * laplace(sin(3*t));
-    
-ilaplace(F)
-ilaplace(G)
-ilaplace(H)
-ilaplace(J)
-ilaplace(K)
-
-fplot(ilaplace(F))
-figure()
-fplot(ilaplace(G))
-figure()
-fplot(ilaplace(H))
-figure()
-fplot(ilaplace(J))
-figure()
-fplot(ilaplace(K))
+% syms t s;
+% one(t) = t^0; %1
+% F(s) = laplace(one) * laplace(one);
+% G(s) = laplace(one) * laplace(sin(2*t));
+% H(s) = laplace(exp(t)) * laplace(exp(-t));
+% J(s) = laplace(exp(t)) * laplace(t);
+% K(s) = laplace(cos(2*t)) * laplace(sin(3*t));
+%     
+% ilaplace(F)
+% ilaplace(G)
+% ilaplace(H)
+% ilaplace(J)
+% ilaplace(K)
+% 
+% fplot(ilaplace(F))
+% figure()
+% fplot(ilaplace(G))
+% figure()
+% fplot(ilaplace(H))
+% figure()
+% fplot(ilaplace(J))
+% figure()
+% fplot(ilaplace(K))
 
 
 %bye bye;
