@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<form action="/store" method="post">
+	<form action="/" method="post">
 		<div width="100%" class="container" align="center">
 			<h1>Register</h1>
 			<p>Please fill in this form to create an account.</p>
@@ -33,9 +33,15 @@
 				</tr>
 			</table>
 			<hr>
-			<input name="Submit" type="Submit" value="Submit">
+			<input id="submitEvent" name="Submit" type="Submit" value="Submit">
 		</div>
 	</form>
+	<script>
+		const submitBtn = document.getElementById('submitEvent')
+		submitBtn.addEventListener('click',function(){
+			alert("Your data was submitted.")
+		})
+	</script>
 </body>
 
 </html>
