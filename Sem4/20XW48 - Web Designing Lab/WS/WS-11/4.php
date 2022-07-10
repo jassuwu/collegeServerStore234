@@ -16,9 +16,8 @@
         body {
             background-color: black;
         }
-
     </style>
-    <p> <?php echo date(" h: i : s A");?> </p>
+    <p> <?php echo date(" h: i : s A"); ?> </p>
 </head>
 
 </html>
